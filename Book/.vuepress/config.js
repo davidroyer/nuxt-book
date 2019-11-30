@@ -5,6 +5,7 @@ module.exports = {
   title: "Nuxt.js Guide",
   // dest: "./dist",
   themeConfig: {
+    displayAllHeaders: true,
     // Multiple Sidebars
     // sidebar: {
     //   "/chapter1/": [
