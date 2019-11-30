@@ -1,0 +1,128 @@
+$ff-base = 'Averta Std', sans-serif;
+$ff-serif = 'Noto Serif', sans-serif;
+
+@font-face {
+    font-family: 'Averta Std';
+    font-weight: 400;
+    src: url('/fonts/AvertaStd-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Averta Std';
+    font-weight: 600;
+    src: url('/fonts/AvertaStd-Semibold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Averta Std';
+    font-weight: 800;
+    src: url('/fonts/AvertaStd-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Averta Std';
+    font-style: italic;
+    src: url('/fonts/AvertaStd-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    font-style: italic;
+    src: url('/fonts/NotoSerif-Italic.ttf') format('truetype');
+}
+
+.dp-table {
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        vertical-align: top;
+
+        &:first-child {
+            background-color: #f5f5f5;
+        }
+    }
+
+    li {
+        text-align: left;
+        text-indent: initial;
+    }
+
+    &.numbered {
+        td {
+            &:nth-child(2) {
+                background-color: #f5f5f5;
+            }
+        }
+    }
+
+    &.discovery {
+        td {
+            text-align: left;
+            line-height: 1.5;
+        }
+    }
+}
+
+body {
+    font-family: $ff-base;
+}
+
+// Code Copy
+.code-copy {
+    span {
+        font-weight: 600;
+        font-family: $ff-base;
+        transition: opacity 200ms ease-out !important;
+        padding-bottom: 0.25rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    svg {
+        opacity: 1 !important;
+        padding: 0.25rem;
+        border-radius: 3px;
+        transition: all 0.25s ease;
+
+        &:hover, &:active {
+            background-color: #ffffff59;
+        }
+    }
+}
+
+// FIX FOR FLASH ON CLICK TO COPY
+div[class*='language-'] pre, div[class*='language-'] pre[class*='language-'] {
+    background-color: #282c34 !important;
+}
+
+// Sidebar
+.sidebar-heading {
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    font-size: 1.2rem !important;
+    letter-spacing: -0.75px;
+    position: relative;
+
+    .arrow {
+        left: initial !important;
+        right: 1em;
+        top: 14px !important;
+        background: initial;
+        position: absolute !important;
+
+        &.right {
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 7px solid #ccc;
+        }
+
+        &.down {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 7px solid #ccc;
+        }
+    }
+}

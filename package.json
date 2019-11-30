@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-book",
+  "version": "0.0.0",
+  "description": "Nuxt EBook",
+  "main": "index.js",
+  "repository": "https://github.com/davidroyer/nuxt-book",
+  "author": "David Royer",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "directory-tree": "^2.2.4",
+    "glob": "^7.1.6",
+    "vuepress": "^1.2.0"
+  },
+  "dependencies": {
+    "vue-svg-loader": "^0.15.0",
+    "vuepress-plugin-code-copy": "^1.0.4",
+    "vuepress-theme-live-ebook": "^2.1.1"
+  },
+  "scripts": {
+    "dev": "vuepress dev Book",
+    "build": "vuepress build Book",
+    "serve": "http-server book/.vuepress/dist"
+  }
+}

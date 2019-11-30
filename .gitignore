@@ -1,0 +1,4 @@
+node_modules
+# .BACKUP
+.DS_Store
+**/*/dist
