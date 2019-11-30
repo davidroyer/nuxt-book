@@ -38,7 +38,7 @@ function generateVPressSidebar() {
       const groupObj = {
         title: titleCase(key),
         children: item,
-        collapsable: true
+        collapsable: false
       };
       vpressNavArray.push(groupObj);
     } else {
