@@ -122,7 +122,7 @@ yarn dev
 
 Now that we have gotten to sample using Nuxt with `create-nuxt-app`, lets create the app we'll use to begin building an application.
 
-Our application will be called NuxtStrap, and we'll be using [BootstrapVue](https://bootstrap-vue.js.org/) as our custom UI framework which is a Vue version of Bootstrap.
+<!-- Our application will be called NuxtStrap, and we'll be using [BootstrapVue](https://bootstrap-vue.js.org/) as our custom UI framework which is a Vue version of Bootstrap.
 
 ### Creating NuxtStrap
 
@@ -155,9 +155,9 @@ yarn dev
 1. View the result at localhost:3000. It should look similar to the following:
    ![alt text](/images/nuxtstrap-dev.png "Nuxt Starter Dev")
 
-Now we're ready to begin building our application, and will be using NuxtStrap for the remainder of Chapter 2 to do so.
+Now we're ready to begin building our application, and will be using NuxtStrap for the remainder of Chapter 2 to do so. -->
 
-# Project Architecture
+<!-- # Project Architecture
 
 Viewing our project, NuxtStrap, in an editor shows various files and folders already created.
 
@@ -174,9 +174,9 @@ import BootstrapVue from "bootstrap-vue";
 Vue.use(BootstrapVue);
 ```
 
-This trivial step is taken care of though by using the module.
+This trivial step is taken care of though by using the module. -->
 
-# Adding Additional Routes via Pages Directory
+<!-- # Adding Additional Routes via Pages Directory
 
 We want 4 pages for our project:
 
@@ -199,7 +199,7 @@ While we didn't need to create an `index.vue`, we will be editing it. We are goi
 
 Place the following in `index.vue`:
 
-```html
+```vue
 <template>
   <div>
     <h1 class="title">Home Page</h1>
@@ -225,7 +225,7 @@ Place the following in `index.vue`:
 
 Place the following in `about.vue`:
 
-```html
+```vue
 <template>
   <div>
     <h1 class="title">About Page</h1>
@@ -238,7 +238,7 @@ Place the following in `about.vue`:
 
 Place the following in `admin.vue`:
 
-```html
+```vue
 <template>
   <div>
     <h1 class="title">Admin Page</h1>
@@ -251,7 +251,7 @@ Place the following in `admin.vue`:
 
 Place the following in `login.vue`:
 
-```html
+```vue
 <div>
   <h1 class="title">Login Page</h1>
   <h2 class="h5">Please Login</h2>
@@ -269,7 +269,7 @@ For right now, we'll place our navigation in `default.vue` file which exists ins
 
 At the time of this writing, the template for `default.vue` only consists of the following:
 
-```html
+```vue
 <template>
   <div>
     <nuxt />
@@ -279,7 +279,7 @@ At the time of this writing, the template for `default.vue` only consists of the
 
 We're going to place our navigation above the `<nuxt/>` component which results in our template for `default.vue` being:
 
-```html
+```vue
 <template>
   <div>
     <nav>
@@ -304,15 +304,15 @@ With that in place as well as our newly created routes, we can now test navigati
 yarn dev
 ```
 
-If everything was setup correctly, you should be able to navigate between your 3 routes.
+If everything was setup correctly, you should be able to navigate between your 3 routes. -->
 
-# Adding Page Transitions
+<!-- # Adding Page Transitions
 
 To begin taking advantage of Nuxt's built in transitions, all we need to do is add a few lines of CSS.
 
 By default, Nuxt uses the transition name of `page`, This is attribute we normally need to set on our own like so:
 
-```html
+```vue
 <transition name="some-name"></transition>
 ```
 
@@ -320,7 +320,7 @@ With Nuxt however, we just need to add some CSS to being experiencing silky-smoo
 
 Add the following to `default.vue` to begin taking advantage of Nuxt's built-in transition capabilities.
 
-```html
+```vue
 <style>
   .page-enter-active,
   .page-leave-active {
@@ -331,9 +331,9 @@ Add the following to `default.vue` to begin taking advantage of Nuxt's built-in 
     opacity: 0;
   }
 </style>
-```
+``` -->
 
-# Setting Up Assets
+<!-- # Setting Up Assets
 
 Any assets such as images, css, scss, ect., that you want being processed through Webpack go inside the `assets` directory.
 
@@ -370,7 +370,7 @@ While it perfectly fine to write styles inside our Vue component files, and I of
 
 Within the `style` tags inside our `.vue` files, we can set the `src` attribute to the location of one of our `scss` files. It looks like this:
 
-```html
+```vue
 <style src="@/assets/styles/your-vue-component.scss"></style>
 ```
 
@@ -447,7 +447,7 @@ For our project, lets create an `images` directory within our `assets` directory
 
 My image is named `image-example.jpg`. To reference it within a `.vue` file I can do the following:
 
-```html
+```vue
 <img
   class="hero-image"
   src="@/assets/images/image-example.jpg"
@@ -457,7 +457,7 @@ My image is named `image-example.jpg`. To reference it within a `.vue` file I ca
 
 Lets use our new image in `index.vue`. You'll need to adjust your code accordingly to match your image's name and file type. Otherwise the `template` part of `index.vue` should now be the following:
 
-```html
+```vue
 <template>
   <div>
     <h1 class="title">Home Page</h1>
@@ -474,7 +474,7 @@ Lets use our new image in `index.vue`. You'll need to adjust your code according
     </b-modal>
   </div>
 </template>
-```
+``` -->
 
 # Components Directory
 
@@ -497,7 +497,7 @@ In addition to this component having the HTML for our navigation, we will set th
 
 Your new `AppNav` component should look as follows:
 
-```html
+```vue
 <template>
   <nav>
     <b-nav>
@@ -510,9 +510,9 @@ Your new `AppNav` component should look as follows:
 </template>
 
 <script>
-  export default {
-    name: "AppNav"
-  };
+export default {
+  name: "AppNav"
+};
 </script>
 ```
 
@@ -522,7 +522,7 @@ We will follow a similar process for our header component but will need to provi
 
 First, create the file `AppHeader.vue` inside the components directory. Secondly add the following to the component.
 
-```html
+```vue
 <template>
   <header>
     <h1>NuxtStrap</h1>
@@ -531,14 +531,14 @@ First, create the file `AppHeader.vue` inside the components directory. Secondly
 </template>
 
 <script>
-  import AppNav from "@/components/AppNav";
+import AppNav from "@/components/AppNav";
 
-  export default {
-    name: "AppHeader",
-    components: {
-      AppNav
-    }
-  };
+export default {
+  name: "AppHeader",
+  components: {
+    AppNav
+  }
+};
 </script>
 ```
 
@@ -546,7 +546,7 @@ Now lets import this into our `default.vue` file inside the `layouts` directory.
 
 Our `default.vue` file should now be as follows:
 
-```html
+```vue
 <template>
   <div>
     <AppHeader />
@@ -555,13 +555,13 @@ Our `default.vue` file should now be as follows:
 </template>
 
 <script>
-  import AppHeader from "@/components/AppHeader";
+import AppHeader from "@/components/AppHeader";
 
-  export default {
-    components: {
-      AppHeader
-    }
-  };
+export default {
+  components: {
+    AppHeader
+  }
+};
 </script>
 
 <style src="@/assets/styles/components/app-header.scss" lang="scss"></style>
@@ -571,7 +571,7 @@ Our `default.vue` file should now be as follows:
 
 We'll setup our last component by creating the `AppFooter` file with the following:
 
-```html
+```vue
 <template>
   <footer>
     <p>Our Footer Component</p>
@@ -579,9 +579,9 @@ We'll setup our last component by creating the `AppFooter` file with the followi
 </template>
 
 <script>
-  export default {
-    name: "AppFooter"
-  };
+export default {
+  name: "AppFooter"
+};
 </script>
 
 <style
@@ -595,7 +595,7 @@ In `default.vue`, import the new `AppFooter` component and update the `component
 
 This results in the our `default.vue` layout file being:
 
-```html
+```vue
 <template>
   <div>
     <AppHeader />
@@ -605,15 +605,15 @@ This results in the our `default.vue` layout file being:
 </template>
 
 <script>
-  import AppHeader from "@/components/AppHeader";
-  import AppFooter from "@/components/AppFooter";
+import AppHeader from "@/components/AppHeader";
+import AppFooter from "@/components/AppFooter";
 
-  export default {
-    components: {
-      AppHeader,
-      AppFooter
-    }
-  };
+export default {
+  components: {
+    AppHeader,
+    AppFooter
+  }
+};
 </script>
 ```
 

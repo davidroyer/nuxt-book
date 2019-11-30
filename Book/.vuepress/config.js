@@ -2,7 +2,7 @@ const { generateVPressSidebar } = require("../../vpress-navinator");
 // console.log(generateVPressSidebar());
 
 module.exports = {
-  title: "Nuxt.js Guide",
+  title: "Learning Nuxt.js",
   // dest: "./dist",
   themeConfig: {
     displayAllHeaders: true,

@@ -71,8 +71,23 @@ body {
     font-family: $ff-base;
 }
 
-// Code Copy
+/*
+Fixing Home Route Showing In Nav
+*/
+.sidebar-links {
+    text-transform: capitalize;
+
+    > li:first-child {
+        display: none;
+    }
+}
+
+/*
+Code Copy Fix
+*/
 .code-copy {
+    opacity: 1 !important;
+
     span {
         font-weight: 600;
         font-family: $ff-base;
@@ -86,9 +101,15 @@ body {
         padding: 0.25rem;
         border-radius: 3px;
         transition: all 0.25s ease;
+        top: 25px;
+        right: 4px;
+        width: 20px;
+        opacity: 0.65 !important;
+        height: 20px !important;
 
         &:hover, &:active {
             background-color: #ffffff59;
+            opacity: 1 !important;
         }
     }
 }
