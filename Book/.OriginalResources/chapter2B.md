@@ -4,7 +4,7 @@ We will first create two Nuxt projects using their CLI tool. This will demonstra
 
 Following these first two apps, we will create a third project, which we'll use to begin learning the basics of developing and customizing Nuxt.js applications.
 
-***There are two important items to note before continuing:***
+**_There are two important items to note before continuing:_**
 
 1. For version 1.0 and higher of Nuxt.js, you will need at least version 8.0.0 of Node. Check your node version by running:
 
@@ -88,7 +88,7 @@ yarn dev
 
 Now lets create another app and choose different options. Be sure to quick the previous application if you have not done so already.
 
-We follow the same process as before but will choose *Vuetify* as our framework.
+We follow the same process as before but will choose _Vuetify_ as our framework.
 
 From the `nuxt-quickstart` directory:
 
@@ -168,10 +168,10 @@ Inside `nuxt.config.js` you'll see a property called `modules` that is an Array.
 It's important to understand that we could have just as easily set BootstrapVue ourselves inside the plugins directory. We could have created a file called `bs-vue.js` (or whatever we wanted), put the following code inside and registered it as a plugin in `nuxt.config.js`.
 
 ```js
-import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
+import Vue from "vue";
+import BootstrapVue from "bootstrap-vue";
 
-Vue.use(BootstrapVue)
+Vue.use(BootstrapVue);
 ```
 
 This trivial step is taken care of though by using the module.
@@ -199,7 +199,7 @@ While we didn't need to create an `index.vue`, we will be editing it. We are goi
 
 Place the following in `index.vue`:
 
-``` html
+```html
 <template>
   <div>
     <h1 class="title">Home Page</h1>
@@ -213,13 +213,12 @@ Place the following in `index.vue`:
 </template>
 
 <script>
-export default {
-  data: () => ({
-    modalShow: false
-  })
-}
+  export default {
+    data: () => ({
+      modalShow: false
+    })
+  };
 </script>
-
 ```
 
 ## About Page
@@ -273,7 +272,7 @@ At the time of this writing, the template for `default.vue` only consists of the
 ```html
 <template>
   <div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 ```
@@ -289,8 +288,8 @@ We're going to place our navigation above the `<nuxt/>` component which results 
         <b-nav-item to="/about">About</b-nav-item>
         <b-nav-item to="/admin">Admin</b-nav-item>
       </b-nav>
-    </nav>    
-    <nuxt/>
+    </nav>
+    <nuxt />
   </div>
 </template>
 ```
@@ -314,7 +313,7 @@ To begin taking advantage of Nuxt's built in transitions, all we need to do is a
 By default, Nuxt uses the transition name of `page`, This is attribute we normally need to set on our own like so:
 
 ```html
-<transition name="some-name">
+<transition name="some-name"></transition>
 ```
 
 With Nuxt however, we just need to add some CSS to being experiencing silky-smooth client-side routing.
@@ -323,11 +322,13 @@ Add the following to `default.vue` to begin taking advantage of Nuxt's built-in 
 
 ```html
 <style>
-  .page-enter-active, .page-leave-active {
-    transition: opacity .4s;
+  .page-enter-active,
+  .page-leave-active {
+    transition: opacity 0.4s;
   }
-  .page-enter, .page-leave-active {
-    opacity: 0
+  .page-enter,
+  .page-leave-active {
+    opacity: 0;
   }
 </style>
 ```
@@ -423,7 +424,7 @@ footer {
   justify-content: space-around;
   flex-flow: row wrap;
   align-items: center;
-  padding: .5em;
+  padding: 0.5em;
   background: #eee;
 }
 ```
@@ -435,9 +436,7 @@ We need to let Nuxt know that we want to use these styles inside `app.scss`. We 
 Add the following to `nuxt.config.js` inside your config object:
 
 ```js
-css: [
-  '@/assets/styles/app.scss'
-]
+css: ["@/assets/styles/app.scss"];
 ```
 
 ## Image Assets
@@ -449,7 +448,11 @@ For our project, lets create an `images` directory within our `assets` directory
 My image is named `image-example.jpg`. To reference it within a `.vue` file I can do the following:
 
 ```html
-<img class="hero-image" src="@/assets/images/image-example.jpg" alt="Image Example">
+<img
+  class="hero-image"
+  src="@/assets/images/image-example.jpg"
+  alt="Image Example"
+/>
 ```
 
 Lets use our new image in `index.vue`. You'll need to adjust your code accordingly to match your image's name and file type. Otherwise the `template` part of `index.vue` should now be the following:
@@ -458,7 +461,11 @@ Lets use our new image in `index.vue`. You'll need to adjust your code according
 <template>
   <div>
     <h1 class="title">Home Page</h1>
-    <img class="hero-image" src="@/assets/images/image-example.jpg" alt="Image Example">    
+    <img
+      class="hero-image"
+      src="@/assets/images/image-example.jpg"
+      alt="Image Example"
+    />
     <b-button variant="primary" @click="modalShow = !modalShow">
       Open Modal
     </b-button>
@@ -504,8 +511,8 @@ Your new `AppNav` component should look as follows:
 
 <script>
   export default {
-    name: 'AppNav'
-  }
+    name: "AppNav"
+  };
 </script>
 ```
 
@@ -519,19 +526,19 @@ First, create the file `AppHeader.vue` inside the components directory. Secondly
 <template>
   <header>
     <h1>NuxtStrap</h1>
-    <AppNav/>
+    <AppNav />
   </header>
 </template>
 
 <script>
-import AppNav from '@/components/AppNav'
+  import AppNav from "@/components/AppNav";
 
-export default {
-  name: 'AppHeader',
-  components: {
-    AppNav
-  }
-}
+  export default {
+    name: "AppHeader",
+    components: {
+      AppNav
+    }
+  };
 </script>
 ```
 
@@ -542,19 +549,19 @@ Our `default.vue` file should now be as follows:
 ```html
 <template>
   <div>
-    <AppHeader/>
-    <nuxt/>
+    <AppHeader />
+    <nuxt />
   </div>
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader'
+  import AppHeader from "@/components/AppHeader";
 
-export default {
-  components: {
-    AppHeader
-  }
-}
+  export default {
+    components: {
+      AppHeader
+    }
+  };
 </script>
 
 <style src="@/assets/styles/components/app-header.scss" lang="scss"></style>
@@ -572,12 +579,16 @@ We'll setup our last component by creating the `AppFooter` file with the followi
 </template>
 
 <script>
-export default {
-  name: 'AppFooter'
-}
+  export default {
+    name: "AppFooter"
+  };
 </script>
 
-<style src="@/assets/styles/components/app-footer.scss" lang="scss" scoped></style>
+<style
+  src="@/assets/styles/components/app-footer.scss"
+  lang="scss"
+  scoped
+></style>
 ```
 
 In `default.vue`, import the new `AppFooter` component and update the `components` property to include it like we we did with the `AppHeader` component.
@@ -587,30 +598,28 @@ This results in the our `default.vue` layout file being:
 ```html
 <template>
   <div>
-    <AppHeader/>
-    <nuxt/>
-    <AppFooter/>
+    <AppHeader />
+    <nuxt />
+    <AppFooter />
   </div>
 </template>
 
 <script>
-  import AppHeader from '@/components/AppHeader'
-  import AppFooter from '@/components/AppFooter'
+  import AppHeader from "@/components/AppHeader";
+  import AppFooter from "@/components/AppFooter";
 
   export default {
     components: {
       AppHeader,
       AppFooter
     }
-  }
+  };
 </script>
 ```
 
 ### Testing Our Styles
 
 We are ready to test our asset modifications/additions now that we have taken care of the three necessary steps. Run your project in development mode to test it out and confirm everything is working properly.
-
-
 
 # Adding Meta For SEO
 
