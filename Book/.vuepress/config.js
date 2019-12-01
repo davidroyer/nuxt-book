@@ -1,8 +1,15 @@
+const path = require("path");
 const { generateVPressSidebar } = require("../../vpress-navinator");
 // console.log(generateVPressSidebar());
 
 module.exports = {
   title: "Learning Nuxt.js",
+
+  // configureWebpack: {
+  //   resolve: {
+  //     alias: { "@ns": path.join(__dirname, "../../nuxtstrap") }
+  //   }
+  // },
   // dest: "./dist",
   themeConfig: {
     displayAllHeaders: true,
@@ -32,6 +39,17 @@ module.exports = {
     //   }
     // ]
   },
+
+  configureWebpack() {
+    return {
+      resolve: {
+        alias: {
+          "@public": path.join(__dirname, "./public")
+        }
+      }
+    };
+  },
+
   plugins: [
     [
       "vuepress-plugin-code-copy",
@@ -39,9 +57,9 @@ module.exports = {
         // selector: String,
         align: "bottom",
         // color: String,
-        backgroundTransition: false
+        backgroundTransition: false,
         // backgroundColor: String,
-        // successText: String
+        successText: "Copied"
       }
     ]
   ]

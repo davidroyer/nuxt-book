@@ -10,6 +10,8 @@ $ff-serif = 'Noto Serif', sans-serif;
 @font-face {
     font-family: 'Averta Std';
     font-weight: 600;
+    height: 0;
+    padding-bottom: 0.25rem;
     src: url('/fonts/AvertaStd-Semibold.otf') format('opentype');
 }
 
@@ -87,6 +89,8 @@ Code Copy Fix
 */
 .code-copy {
     opacity: 1 !important;
+    height: 0;
+    padding-bottom: 0.25rem;
 
     span {
         font-weight: 600;
@@ -146,4 +150,8 @@ div[class*='language-'] pre, div[class*='language-'] pre[class*='language-'] {
             border-top: 7px solid #ccc;
         }
     }
+}
+
+h1 ~ h2 {
+    margin-top: -2.7rem !important;
 }
