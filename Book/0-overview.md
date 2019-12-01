@@ -1,3 +1,7 @@
+---
+title: 0. Overview
+---
+
 # Overview
 
 We're going to create an application called NuxtStrap. We'll be using

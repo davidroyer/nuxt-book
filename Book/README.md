@@ -4,7 +4,7 @@ heroImage: /images/nuxtjs-logo.png
 heroText: Learn Nuxt.js
 tagline: Learn Nuxt.js
 actionText: Get Started →
-actionLink: /1-setup/
+actionLink: /0-overview/
 features:
   - title: Simplicity First
     details: Minimal setup with markdown-centered project structure helps you focus on writing.
