@@ -1,10 +1,9 @@
 const path = require("path");
 const { generateVPressSidebar } = require("../../vpress-navinator");
-// console.log(generateVPressSidebar());
 
 module.exports = {
   title: "Learning Nuxt.js",
-
+  dest: "public",
   // configureWebpack: {
   //   resolve: {
   //     alias: { "@ns": path.join(__dirname, "../../nuxtstrap") }

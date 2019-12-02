@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1. Setup | Learning Nuxt.js</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.fe127415.css" as="style"><link rel="preload" href="/assets/js/app.47fe7837.js" as="script"><link rel="preload" href="/assets/js/2.2fa4bc16.js" as="script"><link rel="preload" href="/assets/js/7.bebc207e.js" as="script"><link rel="prefetch" href="/assets/js/10.0bf977f7.js"><link rel="prefetch" href="/assets/js/11.724b730a.js"><link rel="prefetch" href="/assets/js/12.95f49c33.js"><link rel="prefetch" href="/assets/js/13.0b188f4c.js"><link rel="prefetch" href="/assets/js/3.814fb3eb.js"><link rel="prefetch" href="/assets/js/4.5f93fc5e.js"><link rel="prefetch" href="/assets/js/5.3bea30ff.js"><link rel="prefetch" href="/assets/js/6.a36f0df5.js"><link rel="prefetch" href="/assets/js/8.73d0cb0d.js"><link rel="prefetch" href="/assets/js/9.1ac04e02.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.fe127415.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Learning Nuxt.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><a href="/0-overview.html" class="sidebar-link">0. Overview</a></li><li><a href="/00-my-notes.html" class="sidebar-link">00. MY NOTES</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/00-my-notes.html#code-snippet-import" class="sidebar-link">Code Snippet Import</a></li><li class="sidebar-sub-header"><a href="/00-my-notes.html#todos" class="sidebar-link">TODOS</a></li></ul></li><li><a href="/1-setup.html" class="active sidebar-link">1. Setup</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/1-setup.html#create-the-application" class="sidebar-link">Create the application</a></li><li class="sidebar-sub-header"><a href="/1-setup.html#running-our-dev-environment" class="sidebar-link">Running Our Dev Environment</a></li></ul></li><li><a href="/2-project-architecture.html" class="sidebar-link">2. Architecture</a></li><li><a href="/3-adding-routes.html" class="sidebar-link">3. Adding Routes</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/3-adding-routes.html#the-routes" class="sidebar-link">The Routes</a></li><li class="sidebar-sub-header"><a href="/3-adding-routes.html#adding-navigation" class="sidebar-link">Adding Navigation</a></li></ul></li><li><a href="/4-transitions.html" class="sidebar-link">4. Transitions</a></li><li><a href="/5-assets.html" class="sidebar-link">5. Assets</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/5-assets.html#our-style-assets" class="sidebar-link">Our Style Assets</a></li><li class="sidebar-sub-header"><a href="/5-assets.html#image-assets" class="sidebar-link">Image Assets</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="setup"><a href="#setup" class="header-anchor">#</a> Setup</h1> <p>We need to setup our new project.
+We'll be using Nuxt's <code>create-nuxt-app</code> CLI tool to create our project.
+Since the name of our project is NuxtStrap, we'll name the directory
+<code>nuxtstrap</code>.</p> <h2 id="create-the-application"><a href="#create-the-application" class="header-anchor">#</a> Create the application</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> create nuxt-app nuxtstrap
+<span class="token comment"># Or With npx</span>
+npx create-nuxt-app nuxtstrap
+</code></pre></div><p>This will run you through a set of options and choose accordingly so your result is as follows:
+<img src="/images/nuxtstrap-setup.png" alt="alt text" title="Logo Title Text 1"></p> <p>Once completed, <code>cd</code> into <code>nuxtstrap</code> and open it in your editor of choice.</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">cd</span> nuxtstrap
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>I highly recommend you don't make change this name.
+It could cause a lot of confusion and errors later
+as you read through but have to remember your project name is different</p></div> <br> <h2 id="running-our-dev-environment"><a href="#running-our-dev-environment" class="header-anchor">#</a> Running Our Dev Environment</h2> <p>Inside the <code>nuxtstrap</code> directory, we can run our development server:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> dev
+</code></pre></div><p>View the result at localhost:3000. It should look similar to the following:
+<img src="/images/nuxtstrap-dev.png" alt="alt text" title="Nuxt Starter Dev"></p> <p><strong>Now we're ready to begin learning about and building our application.</strong></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/00-my-notes.html" class="prev">00. MY NOTES</a></span> <span class="next"><a href="/2-project-architecture.html">2. Architecture</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.47fe7837.js" defer></script><script src="/assets/js/2.2fa4bc16.js" defer></script><script src="/assets/js/7.bebc207e.js" defer></script>
+  </body>
+</html>

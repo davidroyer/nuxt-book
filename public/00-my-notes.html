@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>00. MY NOTES | Learning Nuxt.js</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.fe127415.css" as="style"><link rel="preload" href="/assets/js/app.47fe7837.js" as="script"><link rel="preload" href="/assets/js/2.2fa4bc16.js" as="script"><link rel="preload" href="/assets/js/6.a36f0df5.js" as="script"><link rel="prefetch" href="/assets/js/10.0bf977f7.js"><link rel="prefetch" href="/assets/js/11.724b730a.js"><link rel="prefetch" href="/assets/js/12.95f49c33.js"><link rel="prefetch" href="/assets/js/13.0b188f4c.js"><link rel="prefetch" href="/assets/js/3.814fb3eb.js"><link rel="prefetch" href="/assets/js/4.5f93fc5e.js"><link rel="prefetch" href="/assets/js/5.3bea30ff.js"><link rel="prefetch" href="/assets/js/7.bebc207e.js"><link rel="prefetch" href="/assets/js/8.73d0cb0d.js"><link rel="prefetch" href="/assets/js/9.1ac04e02.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.fe127415.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Learning Nuxt.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><a href="/0-overview.html" class="sidebar-link">0. Overview</a></li><li><a href="/00-my-notes.html" class="active sidebar-link">00. MY NOTES</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/00-my-notes.html#code-snippet-import" class="sidebar-link">Code Snippet Import</a></li><li class="sidebar-sub-header"><a href="/00-my-notes.html#todos" class="sidebar-link">TODOS</a></li></ul></li><li><a href="/1-setup.html" class="sidebar-link">1. Setup</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/1-setup.html#create-the-application" class="sidebar-link">Create the application</a></li><li class="sidebar-sub-header"><a href="/1-setup.html#running-our-dev-environment" class="sidebar-link">Running Our Dev Environment</a></li></ul></li><li><a href="/2-project-architecture.html" class="sidebar-link">2. Architecture</a></li><li><a href="/3-adding-routes.html" class="sidebar-link">3. Adding Routes</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/3-adding-routes.html#the-routes" class="sidebar-link">The Routes</a></li><li class="sidebar-sub-header"><a href="/3-adding-routes.html#adding-navigation" class="sidebar-link">Adding Navigation</a></li></ul></li><li><a href="/4-transitions.html" class="sidebar-link">4. Transitions</a></li><li><a href="/5-assets.html" class="sidebar-link">5. Assets</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/5-assets.html#our-style-assets" class="sidebar-link">Our Style Assets</a></li><li class="sidebar-sub-header"><a href="/5-assets.html#image-assets" class="sidebar-link">Image Assets</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="my-notes-for-the-book"><a href="#my-notes-for-the-book" class="header-anchor">#</a> 📚 My Notes For The Book</h1> <blockquote><p>This is to try out different thing</p></blockquote> <h2 id="code-snippet-import"><a href="#code-snippet-import" class="header-anchor">#</a> Code Snippet Import</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AppNav</span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> AppNav <span class="token keyword">from</span> <span class="token string">'@/components/AppNav'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    AppNav
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>scss<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">header</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-flow</span><span class="token punctuation">:</span> row wrap<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token selector">;
+
+    nav</span> <span class="token punctuation">{</span>
+      <span class="token property">margin-left</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.nav</span> <span class="token punctuation">{</span>
+      <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token selector">;
+
+      &amp;-link</span> <span class="token punctuation">{</span>
+        <span class="token selector">&amp;.active</span> <span class="token punctuation">{</span>
+          <span class="token selector">&amp;:focus,
+          &amp;:hover</span> <span class="token punctuation">{</span>
+            <span class="token property">background</span><span class="token punctuation">:</span> #212529c4 <span class="token important">!important</span><span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+            <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span></code></pre></div><h2 id="todos"><a href="#todos" class="header-anchor">#</a> TODOS</h2> <ul><li>[ ] Switch the order to put <code>assets</code> first</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/0-overview.html" class="prev">0. Overview</a></span> <span class="next"><a href="/1-setup.html">1. Setup</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.47fe7837.js" defer></script><script src="/assets/js/2.2fa4bc16.js" defer></script><script src="/assets/js/6.a36f0df5.js" defer></script>
+  </body>
+</html>
