@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/nuxtjs-logo.png
+heroImage: /images/main-banner.png
 heroText: Learn Nuxt.js
 tagline: Learn Nuxt.js
 actionText: Get Started →
