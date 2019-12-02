@@ -1,6 +1,5 @@
 <template>
-  <header class="container">
-    <h1>NuxtStrap</h1>
+  <header>
     <AppNav />
   </header>
 </template>
@@ -9,7 +8,6 @@
 import AppNav from '@/components/AppNav'
 
 export default {
-  name: 'AppHeader',
   components: {
     AppNav
   }
@@ -22,7 +20,6 @@ export default {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1em;
 
     nav {
       margin-left: auto;

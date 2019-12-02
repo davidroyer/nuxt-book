@@ -8,16 +8,15 @@ We want 4 pages for our project:
 
 1. Home Page
 2. About Page
-3. Admin Page
-4. Login Page
+3. Posts Page
 
 Since we already have `index.vue` inside the `pages` directory, we're good for our home page but need to create the remaining three routes.
 
 Do this by creating the following files inside the `pages` directory:
 
 - `about.vue`
-- `admin.vue`
-- `login.vue`
+- `about.vue`
+- `posts.vue`
 
 While we didn't need to create an `index.vue`, we will be editing it. We are going to give each page the bare-minimum because we do not want to distract ourselves with matters outside the scope of this book. However, we will be adding to these pages as we move through this chapter and begin integrating additional functionality.
 
@@ -64,29 +63,17 @@ Place the following in `about.vue`:
 </template>
 ```
 
-### Admin Page
+### Posts Page
 
 Place the following in `admin.vue`:
 
 ```vue
 <template>
   <div>
-    <h1 class="title">Admin Page</h1>
-    <p>Your admin settings go here</p>
+    <h1 class="title">Posts Page</h1>
+    <p>Your posts go here</p>
   </div>
 </template>
-```
-
-### Login Page
-
-Place the following in `login.vue`:
-
-```vue
-<div>
-  <h1 class="title">Login Page</h1>
-  <h2 class="h5">Please Login</h2>
-  <b-button variant="outline-secondary" size="lg">Login</b-button>
-</div>
 ```
 
 ## Adding Navigation
@@ -108,6 +95,8 @@ At the time of this writing, the template for `default.vue` only consists of the
 ```
 
 We're going to place our navigation above the `<nuxt/>` component which results in our template for `default.vue` being:
+
+<!-- TODO: Need to update this example code to newer version -->
 
 ```vue
 <template>

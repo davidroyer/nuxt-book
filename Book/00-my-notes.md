@@ -9,3 +9,9 @@ title: 00. MY NOTES
 ## Code Snippet Import
 
 <<< @/snippets/components/AppHeader.vue
+
+## TODOS
+
+<!-- TODO: Switch the order to put `assets` first -->
+
+- [ ] Switch the order to put `assets` first
