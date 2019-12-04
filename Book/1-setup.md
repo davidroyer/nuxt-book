@@ -18,7 +18,7 @@ npx create-nuxt-app nuxtstrap
 ```
 
 This will run you through a set of options and choose accordingly so your result is as follows:
-![alt text](/images/nuxtstrap-setup.png "Logo Title Text 1")
+![alt text](/images/cli-setup-image.png "CLI Setup")
 
 Once completed, `cd` into `nuxtstrap` and open it in your editor of choice.
 
@@ -44,5 +44,18 @@ yarn dev
 
 View the result at localhost:3000. It should look similar to the following:
 ![alt text](/images/nuxtstrap-dev.png "Nuxt Starter Dev")
+
+## `axios` Module
+
+We need sure the `axios` module was added when we ran through our setup. We will be making request to an external API so we’ll choose to add the axios module.
+
+Inside the `nuxt.config` file add the following code after the `module` option. This will allow us to make more concise code when making API calls. We will go into more depth about module
+and the axios module later.
+
+```js
+axios: {
+  baseURL: "https://json-api.now.sh";
+}
+```
 
 **Now we're ready to begin learning about and building our application.**
