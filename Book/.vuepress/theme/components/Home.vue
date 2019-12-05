@@ -33,11 +33,14 @@ export default {
 
   computed: {
     data () {
-      return this.$page.frontmatter
+      return {
+        ...this.$page.frontmatter,
+        sitePage: this.$site.pages
+      }
     },
 
     actionLink () {
-      const [firstPage] = this.$site.pages;
+      const [homePage, firstPage] = this.$site.pages;
 
       return {
         link: firstPage.path,
