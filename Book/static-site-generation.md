@@ -12,7 +12,7 @@ client you are using though.
 
 This example is assuming we have a dynamic route file of `posts/_id.vue`.
 
-## Example Code
+## Basic Example - A Single Dynamic Route Type
 
 **`post/_id.vue`**
 
@@ -40,7 +40,33 @@ export default {
 };
 ```
 
-## Using the `payload` option
+## Advanced Example - Multiple Dynamic Routes Types
+
+```js
+export default {
+  generate: {
+    async routes() {
+      const baseURL = "https://demo1.wpapi.app/wp-json/wp/v2";
+      const Endpoints = ["posts", "authors", "products"];
+      let routesArray = [];
+
+      for (const endpoint of Endpoints) {
+        const { data } = await axios.get(`${baseURL}/${endpoint}`);
+        const endpointRoutes = data.map(item => `/${endpoint}/${item.id}`);
+        routesArray.push(...endpointRoutes);
+      }
+
+      return routesArray;
+    }
+  }
+};
+```
+
+!!! warning IMPORTANT
+This code will only work if the path of the route matches the path of the API call.
+!!!
+
+## Using The `payload` Option
 
 If you have a lot of routes being processed though then you might want to you
 the `payload` option referenced

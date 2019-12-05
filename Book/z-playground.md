@@ -2,6 +2,9 @@
 
 > This is to try out different thing for writing
 
+This will run you through a set of options and choose accordingly so your result is as follows:
+![alt text](/images/cli-setup-image.png "CLI Setup")
+
 !!! note Testing Notes
 Good Note
 !!!
@@ -49,6 +52,6 @@ Reasons why you don't want to do this:
 ### Local using `video` tag
 
 <video width="560" height="350" controls>
-  <source src="videos/cli-setup-video.mov" type="video/mp4">
+  <source src="/videos/cli-setup-video.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>
