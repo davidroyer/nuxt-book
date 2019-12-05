@@ -6,6 +6,30 @@ title: 00. MY NOTES
 
 > This is to try out different thing
 
+!!! note Testing Notes
+Good Note
+!!!
+
+!!! tip Tip
+You can also do it this way:
+
+```js
+const { data: posts } = await axios.get("posts");
+```
+
+!!!
+!!! example Testing Example
+Some example here
+!!!
+
+!!! danger Danger Zone
+Reasons why you don't want to do this:
+
+1. This
+2. That
+3. The Other
+   !!!
+
 ## Code Snippet Import
 
 <<< @/snippets/components/AppHeader.vue

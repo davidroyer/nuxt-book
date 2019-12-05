@@ -1,18 +1,6 @@
----
-title: 4. Transitions
----
-
-# Adding Page Transitions
+# Page Transitions
 
 To begin taking advantage of Nuxt's built in transitions, all we need to do is add a few lines of CSS.
-
-By default, Nuxt uses the transition name of `page`, This is attribute we normally need to set on our own like so:
-
-```vue
-<transition name="some-name"></transition>
-```
-
-With Nuxt however, we just need to add some CSS to being experiencing silky-smooth client-side routing.
 
 Add the following to `default.vue` to begin taking advantage of Nuxt's built-in transition capabilities.
 
@@ -28,3 +16,15 @@ Add the following to `default.vue` to begin taking advantage of Nuxt's built-in 
 }
 </style>
 ```
+
+!!! info FYI
+By default, Nuxt uses the transition name of `page`, This is attribute we
+normally need to set on our own like so:
+
+```vue
+<transition name="some-name"></transition>
+```
+
+With Nuxt however, we just need to add some CSS to being experiencing silky-smooth client-side routing.
+
+!!!

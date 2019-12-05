@@ -1,7 +1,3 @@
----
-title: Static Site Route Generation
----
-
 # Static Site Route Generation
 
 Here is an example assuming we are using the `@nuxtjs/axios` module. We can't use it inside the

@@ -1,8 +1,4 @@
----
-title: 5. Assets
----
-
-# Setting Up Assets
+# Assets
 
 Any assets such as images, css, scss, ect., that you want being processed through Webpack go inside the `assets` directory.
 
