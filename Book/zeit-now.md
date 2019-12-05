@@ -7,6 +7,10 @@ There are 2 different ways to deploy.
 1. Using Now CLI
 2. Using a `now.json` file
 
+```bash
+yarn install
+```
+
 ## Important Commands
 
 ### Deploy
@@ -29,3 +33,47 @@ I had to add the following to the project's `package.json` file though.
   }
 }
 ```
+
+## Environmental Variables
+
+### Step 1: Set The Secret Key
+
+```bash
+now secret api-key ApiKeyValue123
+```
+
+### Step 2: Setup `env` variables in `now.json`
+
+**`now.json`**
+
+```json
+{
+  "version": 2,
+
+  "build": {
+    "env": {
+      "API_KEY": "@api_key"
+    }
+  }
+}
+```
+
+### Step 3: Add this to `nuxt.config.js`
+
+```js
+export default {
+  env: {
+    API_KEY: process.env.API_KEY
+  }
+};
+```
+
+!!! info FYI
+The format for using the secret via the `NOW CLI` is as follows:
+
+```bash
+now secret add [name] [value]
+```
+
+The **[value]** is the secret value you are wanting to keep private.
+!!!
