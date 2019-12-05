@@ -9,7 +9,7 @@ module.exports = {
   title: "Nuxt Guide",
 
   description:
-    "Nuxt Guide provides code snippets, solutions to common problems and a resource for Nuxt.js developers",
+    "Nuxt Guide provides code snippets, solutions to common problems, and a resource for Nuxt.js developers",
 
   dest: "public",
 
