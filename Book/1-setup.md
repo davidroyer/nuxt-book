@@ -26,11 +26,11 @@ Once completed, `cd` into `nuxtstrap` and open it in your editor of choice.
 cd nuxtstrap
 ```
 
-::: warning
+!!! warning Warning
 I highly recommend you don't make change this name.
 It could cause a lot of confusion and errors later
 as you read through but have to remember your project name is different
-:::
+!!!
 
 <br>
 

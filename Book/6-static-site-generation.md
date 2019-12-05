@@ -9,8 +9,10 @@ Here is an example assuming we are using the `@nuxtjs/axios` module. We can't us
 generating routes since it's
 already a project dependency via this module.
 
-Just FYI, the code & concept of generating routes is generally the same regardless of the HTTP
+!!! info FYI
+The code & concept of generating routes is generally the same regardless of the HTTP
 client you are using though.
+!!!
 
 This example is assuming we have a dynamic route file of `posts/_id.vue`.
 

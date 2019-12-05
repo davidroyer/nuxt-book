@@ -1,5 +1,7 @@
 const path = require("path");
 const { generateVPressSidebar } = require("../../vpress-navinator");
+const vpressNavigatorPath = path.join(process.cwd(), "vpress-navinator.js");
+console.log("TCL: vpressNavigatorPath", vpressNavigatorPath);
 
 module.exports = {
   title: "Learning Nuxt.js",
@@ -10,24 +12,25 @@ module.exports = {
   //   }
   // },
   // dest: "./dist",
+  // markdown: {
+  //   extendMarkdown: md => {
+  //     md.set({ breaks: true })
+  //     md.use(require('markdown-it-xxx'))
+  //   }
+  // }
+  // markdown: {
+  //   plugins: ["markdown-it-admonition"]
+  // },
+  markdown: {
+    extendMarkdown: md => {
+      md.set({ html: true });
+      md.use(require("markdown-it-admonition"));
+    }
+  },
   themeConfig: {
     displayAllHeaders: true,
-    // Multiple Sidebars
-    // sidebar: {
-    //   "/chapter1/": [
-    //     "" /* /foo/ */,
-    //     "01-overview" /* /foo/one.html */,
-    //     "02-creating-applications" /* /foo/one.html */
-    //   ],
-    //   "/chapter2/": [
-    //     "" /* /foo/ */,
-    //     "01-section1" /* /foo/one.html */,
-    //     "02-section2" /* /foo/one.html */
-    //   ],
-    //   // fallback
-    //   "/": ["" /* / */]
-    // }
     sidebar: generateVPressSidebar()
+
     // sidebar: [
     //   {
     //     title: "Chapter 1",
@@ -38,6 +41,7 @@ module.exports = {
     //   }
     // ]
   },
+  extraWatchFiles: [require.resolve(vpressNavigatorPath)],
 
   configureWebpack() {
     return {
