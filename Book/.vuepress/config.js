@@ -4,14 +4,11 @@ const vpressNavigatorPath = path.join(process.cwd(), "vpress-navinator.js");
 console.log("TCL: vpressNavigatorPath", vpressNavigatorPath);
 
 module.exports = {
+  // extend: "@vuepress/theme-default",
+
   title: "Nuxt Guide",
   dest: "public",
-  // configureWebpack: {
-  //   resolve: {
-  //     alias: { "@ns": path.join(__dirname, "../../nuxtstrap") }
-  //   }
-  // },
-  // dest: "./dist",
+
   // markdown: {
   //   extendMarkdown: md => {
   //     md.set({ breaks: true })
