@@ -7,13 +7,15 @@ There are 2 different ways to deploy.
 1. Using Now CLI
 2. Using a `now.json` file
 
-```bash
-yarn install
-```
-
 ## Important Commands
 
 ### Deploy
+
+```bash
+now --prod
+```
+
+### Secrets for `env` variables
 
 ```bash
 now --prod
