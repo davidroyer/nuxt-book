@@ -14,7 +14,7 @@ This example is assuming we have a dynamic route file of `posts/_id.vue`.
 
 ## Basic Example - A Single Dynamic Route Type
 
-**`post/_id.vue`**
+**`posts/_id.vue`**
 
 ```js
 export default {
