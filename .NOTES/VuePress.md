@@ -27,3 +27,32 @@ Added the following for getting updates to that vPressNavinator utility:
    };
    ```
 3. Create only the items you want to override.
+
+## Page Transitions
+
+The default theme needs be extended so we can override the `Page.vue` component.
+After that, it's just like normal Vue transitions.
+
+### Example:
+
+**`theme/components/Page.vue`**
+
+```vue
+<template>
+  <transition name="page-content">
+    <Content class="theme-default-content" />
+  </transition>
+</template>
+```
+
+If you want to change something except `<Content />` part, use binding
+
+```vue
+<template>
+  <transition name="header-fade" mode="out-in">
+    <header v-bind:key="$page.key">
+      <h1>{{ $page.title }}</h1>
+    </header>
+  </transition>
+</template>
+```

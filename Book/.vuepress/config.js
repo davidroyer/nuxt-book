@@ -27,7 +27,7 @@ module.exports = {
 
   themeConfig: {
     displayAllHeaders: true,
-    smoothScroll: true,
+    // smoothScroll: true,
     sidebar: generateVPressSidebar()
   },
 
