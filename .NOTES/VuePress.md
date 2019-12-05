@@ -40,7 +40,7 @@ After that, it's just like normal Vue transitions.
 ```vue
 <template>
   <transition name="page-content">
-    <Content :custom="false" />
+    <Content class="theme-default-content" />
   </transition>
 </template>
 ```
