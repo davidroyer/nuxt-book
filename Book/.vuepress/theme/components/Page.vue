@@ -2,7 +2,7 @@
   <main class="page">
     <slot name="top" />
 
-    <transition name="page-content">
+    <transition name="fade" mode="out-in">
       <Content class="theme-default-content" />
     </transition>
 
