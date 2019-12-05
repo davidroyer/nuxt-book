@@ -4,7 +4,7 @@ const vpressNavigatorPath = path.join(process.cwd(), "vpress-navinator.js");
 console.log("TCL: vpressNavigatorPath", vpressNavigatorPath);
 
 module.exports = {
-  title: "Learning Nuxt.js",
+  title: "Nuxt Guide",
   dest: "public",
   // configureWebpack: {
   //   resolve: {
@@ -52,6 +52,14 @@ module.exports = {
       {
         backgroundTransition: false,
         successText: "Copied"
+      }
+    ],
+    [
+      "vuepress-plugin-clean-urls",
+      {
+        normalSuffix: "/",
+        indexSuffix: "/",
+        notFoundPath: "/404.html"
       }
     ]
   ]

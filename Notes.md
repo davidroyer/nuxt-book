@@ -4,14 +4,28 @@
 
 - Use Stylus Supreme for getting formatting of `.styl` files to work
 
+<br>
+
 ## VuePress
 
-- Added the following for getting updates to that vPressNavinator utility:
-  ```js
-  {
-    extraWatchFiles: [require.resolve(vpressNavigatorPath)];
-  }
-  ```
+### Watching Files
+
+Added the following for getting updates to that vPressNavinator utility:
+
+```js
+{
+  extraWatchFiles: [require.resolve(vpressNavigatorPath)];
+}
+```
+
+### IOS Zoom Fix
+
+```stylus
+.search-box input
+    font-size 16px;
+```
+
+<br>
 
 ## Stylus
 

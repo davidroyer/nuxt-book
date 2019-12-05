@@ -15,6 +15,7 @@
   "dependencies": {
     "markdown-it-admonition": "^1.0.4",
     "vue-svg-loader": "^0.15.0",
+    "vuepress-plugin-clean-urls": "^1.1.1",
     "vuepress-plugin-code-copy": "^1.0.4",
     "vuepress-theme-live-ebook": "^2.1.1"
   },

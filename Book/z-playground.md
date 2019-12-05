@@ -1,6 +1,6 @@
-# :books: My Notes For The Book
+# Playground
 
-> This is to try out different thing
+> This is to try out different thing for writing
 
 !!! note Testing Notes
 Good Note
