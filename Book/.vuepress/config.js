@@ -27,20 +27,12 @@ module.exports = {
       md.use(require("markdown-it-admonition"));
     }
   },
+
   themeConfig: {
     displayAllHeaders: true,
     sidebar: generateVPressSidebar()
-
-    // sidebar: [
-    //   {
-    //     title: "Chapter 1",
-    //     children: [
-    //       "/chapter1/01-overview",
-    //       "/chapter1/02-creating-applications"
-    //     ]
-    //   }
-    // ]
   },
+
   extraWatchFiles: [require.resolve(vpressNavigatorPath)],
 
   configureWebpack() {
@@ -57,11 +49,7 @@ module.exports = {
     [
       "vuepress-plugin-code-copy",
       {
-        // selector: String,
-        align: "bottom",
-        // color: String,
         backgroundTransition: false,
-        // backgroundColor: String,
         successText: "Copied"
       }
     ]
