@@ -1,7 +1,3 @@
----
-title: 00. MY NOTES
----
-
 # :books: My Notes For The Book
 
 > This is to try out different thing
