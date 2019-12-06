@@ -1,17 +1,37 @@
 const path = require("path");
 const { generateVPressSidebar } = require("../../vpress-navinator");
 const vpressNavigatorPath = path.join(process.cwd(), "vpress-navinator.js");
-console.log("TCL: vpressNavigatorPath", vpressNavigatorPath);
+
+const Site = {
+  url: "https://learningnuxt.tech",
+  title: "Nuxt Guide",
+  description:
+    "Provides code snippets, solutions to common problems, and a resource for Nuxt.js developers.",
+  ogType: "website",
+  ogImage: "images/main-banner.png",
+  twitterUsername: "@DavidRoyer_"
+};
 
 module.exports = {
-  // extend: "@vuepress/theme-default",
-
-  title: "Nuxt Guide",
-
-  description:
-    "Nuxt Guide provides code snippets, solutions to common problems, and a resource for Nuxt.js developers",
-
+  title: Site.title,
+  description: Site.description,
   dest: "public",
+
+  head: [
+    ["link", { rel: "icon", type: "image/jpg", href: "/favicon.jpg" }],
+    ["meta", { name: "og:title", content: Site.title }],
+    ["meta", { name: "og:description", content: Site.description }],
+    [
+      "meta",
+      {
+        name: "og:image",
+        content: `${Site.url}/${Site.ogImage}`
+      }
+    ],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "og:type", content: "website" }],
+    ["meta", { name: "og:url", content: Site.url }]
+  ],
 
   // markdown: {
   //   extendMarkdown: md => {
@@ -31,8 +51,8 @@ module.exports = {
 
   themeConfig: {
     displayAllHeaders: true,
-    // smoothScroll: true,
     sidebar: generateVPressSidebar()
+    // smoothScroll: true,
   },
 
   extraWatchFiles: [require.resolve(vpressNavigatorPath)],
