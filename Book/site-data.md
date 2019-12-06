@@ -15,9 +15,6 @@ There are menu use cases and this is just one of them show here below.
 **`db/site.yaml`**
 
 ```yaml
-title: NuxtStrap
-description: An example Nuxt.js app with BootstrapVue.
-
 nav:
   - title: Home
     path: /
