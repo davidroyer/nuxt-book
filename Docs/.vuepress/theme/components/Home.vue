@@ -1,6 +1,5 @@
 <template>
   <main class="home" aria-labelledby="main-title">
-    <h1>HOME</h1>
     <header class="hero">
       <img
         v-if="data.heroImage"
@@ -20,7 +19,6 @@
         <NavLink class="action-button" :item="actionLink" />
       </p>
     </header>
-    <h1>HOME</h1>
 
     <div class="features" v-if="data.features && data.features.length">
       <div
@@ -32,17 +30,15 @@
         <p>{{ feature.details }}</p>
       </div>
     </div>
-    <h1>HOME</h1>
 
     <Content class="theme-default-content custom" />
-    <h1>HOME</h1>
 
     <div class="footer" v-if="data.footer">{{ data.footer }}</div>
   </main>
 </template>
 
 <script>
-import NavLink from "@theme/components/NavLink.vue";
+import NavLink from "@theme/components/NavLink.vue"
 
 export default {
   components: { NavLink },
@@ -52,19 +48,19 @@ export default {
       return {
         ...this.$page.frontmatter,
         sitePage: this.$site.pages
-      };
+      }
     },
 
     actionLink() {
-      const [homePage, firstPage] = this.$site.pages;
+      const [homePage, firstPage] = this.$site.pages
 
       return {
         link: firstPage.path,
         text: "Get Started"
-      };
+      }
     }
   }
-};
+}
 </script>
 
 <style lang="stylus">
