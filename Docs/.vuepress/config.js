@@ -2,6 +2,8 @@ const path = require("path");
 const { generateVPressSidebar } = require("../../vpress-navinator");
 const vpressNavigatorPath = path.join(process.cwd(), "vpress-navinator.js");
 
+console.log("FROM ROOT LIKE I WANTED");
+
 const Site = {
   url: "https://learningnuxt.tech",
   title: "Nuxt Guide",

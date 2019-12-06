@@ -5,10 +5,12 @@ const glob = require("glob");
 function generateVPressSidebar() {
   const vpressNav = {};
   const vpressItems = glob.sync("**/*.md", {
-    cwd: "Book"
+    cwd: "Docs"
   });
 
   vpressItems.forEach(item => {
+    console.log("item", item);
+
     let groupName;
     let itemName;
     let path = item
@@ -51,7 +53,7 @@ function generateVPressSidebar() {
 
 function handleMarkdownFile(item) {
   item.path = item.path
-    .replace("Book", "")
+    .replace("Docs", "")
     .replace(".md", "")
     .replace("README", "")
     .replace("index", "");
