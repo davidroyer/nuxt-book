@@ -1,5 +1,5 @@
 ---
-description: Meta description for Plugins page.
+# description: Meta description for Plugins page.
 ---
 
 # Plugins

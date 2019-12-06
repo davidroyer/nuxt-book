@@ -102,6 +102,7 @@ export default {
       align-items flex-start;
       align-content stretch;
       justify-content space-between;
+      text-align center;
 
     .feature
       flex-grow 1;
@@ -110,7 +111,7 @@ export default {
 
       h2
         font-size 1.4rem;
-        font-weight 500;
+        // font-weight 500;
         border-bottom none;
         padding-bottom 0;
         color lighten($textColor, 10%);

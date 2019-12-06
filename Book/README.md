@@ -8,9 +8,14 @@ actionLink: /0-overview/
 features:
   - title: Easy To Follow
     details: Navigatable sections of learning so it's easy to process.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
+
+  - title: Code Snippets
+    details: All code snippets are easy to by using the click-to-copy provided
+      for all the several snippets.
+
+  - title: Developer Resource
+    details: Use as a reference to speed-up and impprove your Nuxt.js
+      development.
+
 footer: MIT Licensed | Copyright © 2019-present David Royer
 ---

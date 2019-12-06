@@ -1,5 +1,5 @@
 ---
-description: Meta description for Meta page.
+# description: Meta description for Meta page.
 ---
 
 # Meta
