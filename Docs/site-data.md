@@ -8,7 +8,8 @@ YAML because of how clean and easy it write and read it is.
 By using `js-yaml-loader`, it gets imported as JS which is exactly how JSON is
 imported by Webpack.
 
-There are menu use cases and this is just one of them show here below.
+There are many use cases and this is just one of them show below to illustrate
+the concept.
 
 ## Example
 
@@ -35,18 +36,18 @@ export default {
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: "js-yaml-loader"
-      });
+      })
     }
   }
-};
+}
 ```
 
 **`store/index.js`**
 
 ```js
-import siteData from "@/db/site.yml";
+import siteData from "@/db/site.yml"
 
 export const state = () => ({
   nav: siteData.nav
-});
+})
 ```
