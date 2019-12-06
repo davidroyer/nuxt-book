@@ -21,8 +21,7 @@
     "vuepress-theme-live-ebook": "^2.1.1"
   },
   "scripts": {
-    "dev": "vuepress dev",
-    "dev:old": "vuepress dev Docs",
+    "dev": "vuepress dev Docs",
     "build": "vuepress build Docs",
     "serve": "http-server Docs/.vuepress/dist"
   }

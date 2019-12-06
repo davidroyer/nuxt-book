@@ -12,54 +12,54 @@ client you are using though.
 
 This example is assuming we have a dynamic route file of `posts/_id.vue`.
 
-## Basic Example - A Single Dynamic Route Type
+## A Single Dynamic Route Type
 
 **`posts/_id.vue`**
 
 ```js
 export default {
   async asyncData({ app, params }) {
-    const post = await app.$axios.$get(`posts/${params.id}`);
-    return { post };
+    const post = await app.$axios.$get(`posts/${params.id}`)
+    return { post }
   }
-};
+}
 ```
 
 **In `nuxt.config.js`**
 
 ```js
-import axios from "axios";
+import axios from "axios"
 
 export default {
   generate: {
     async routes() {
-      const { data } = await axios.get("https://json-api.now.sh/posts");
-      return data.map(post => `posts/${post.id}`);
+      const { data } = await axios.get("https://json-api.now.sh/posts")
+      return data.map(post => `posts/${post.id}`)
     }
   }
-};
+}
 ```
 
-## Advanced Example - Multiple Dynamic Routes Types
+## Multiple Dynamic Routes Types
 
 ```js
 export default {
   generate: {
     async routes() {
-      const baseURL = "https://demo1.wpapi.app/wp-json/wp/v2";
-      const Endpoints = ["posts", "authors", "products"];
-      let routesArray = [];
+      const baseURL = "https://demo1.wpapi.app/wp-json/wp/v2"
+      const Endpoints = ["posts", "authors", "products"]
+      let routesArray = []
 
       for (const endpoint of Endpoints) {
-        const { data } = await axios.get(`${baseURL}/${endpoint}`);
-        const endpointRoutes = data.map(item => `/${endpoint}/${item.id}`);
-        routesArray.push(...endpointRoutes);
+        const { data } = await axios.get(`${baseURL}/${endpoint}`)
+        const endpointRoutes = data.map(item => `/${endpoint}/${item.id}`)
+        routesArray.push(...endpointRoutes)
       }
 
-      return routesArray;
+      return routesArray
     }
   }
-};
+}
 ```
 
 !!! warning IMPORTANT
