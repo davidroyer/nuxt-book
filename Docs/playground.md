@@ -13,7 +13,7 @@ Good Note
 You can also do it this way:
 
 ```js
-const { data: posts } = await axios.get("posts");
+const { data: posts } = await axios.get("posts")
 ```
 
 !!!
@@ -31,7 +31,7 @@ Reasons why you don't want to do this:
 
 ## Code Snippet Import
 
-<<< @/snippets/components/AppHeader.vue
+<<< @/.snippets/components/AppHeader.vue
 
 ## TODOS
 
