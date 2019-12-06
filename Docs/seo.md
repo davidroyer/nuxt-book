@@ -1,8 +1,6 @@
----
-# description: Meta description for Meta page.
----
+<!-- NOTE: PULL IN NUXT-BOILERPLATE CODE HERE -->
 
-# Meta
+# SEO
 
 > Basic setup we need to have a solid SEO and Social Media presence
 
@@ -33,8 +31,8 @@ If undefined or blank then we don't need the hyphen.
 {
   head: {
     titleTemplate: titleChunk => {
-      return titleChunk ? `${titleChunk} - My Site` : "My Site";
-    };
+      return titleChunk ? `${titleChunk} - My Site` : "My Site"
+    }
   }
 }
 ```
@@ -53,7 +51,7 @@ export default {
   head: {
     title: "Post"
   }
-};
+}
 ```
 
 ### As a `Function`
@@ -63,7 +61,7 @@ export default {
   head() {
     return {
       title: this.post.title
-    };
+    }
   }
-};
+}
 ```

@@ -1,4 +1,4 @@
-# Static Site Route Generation
+# Static Site Generation
 
 Here is an example assuming we are using the `@nuxtjs/axios` module. We can't use it inside the
 `nuxt.config.js` file though so we just the normal version of `axios` there
