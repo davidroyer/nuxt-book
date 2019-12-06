@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.2.0",
     "directory-tree": "^2.2.4",
     "glob": "^7.1.6",
     "vuepress": "^1.2.0"

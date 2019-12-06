@@ -82,6 +82,13 @@ module.exports = {
         indexSuffix: "/",
         notFoundPath: "/404.html"
       }
+    ],
+
+    [
+      "@vuepress/google-analytics",
+      {
+        ga: "UA-56060335-8"
+      }
     ]
   ]
 };
